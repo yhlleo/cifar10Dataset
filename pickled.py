@@ -26,11 +26,11 @@ def pickled(savepath, data, label, fnames, bin_num=BIN_COUNTS, mode="train"):
     idx = 0
     if end < total_num:
       dict = {'data': data[start:end, :],
-              'label': label[start:end],
+              'labels': label[start:end],
               'filenames': fnames[start:end]}
     else:
       dict = {'data': data[start:, :],
-              'label': label[start:],
+              'labels': label[start:],
               'filenames': fnames[start:]}
     if mode == "train":
       dict['batch_label'] = "training batch {} of {}".format(idx, bin_num)
