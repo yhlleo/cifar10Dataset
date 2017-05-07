@@ -19,7 +19,10 @@ Creat your own dataset with the similar format with CIFAR10 in python version.
        ..., 
        [ 71,  60,  74, ...,  68,  69,  68],
        [250, 254, 211, ..., 215, 255, 254],
-       [ 62,  61,  60, ..., 130, 130, 131]], dtype=uint8), 'labels': [6, 9, 9, 4, 1, 1, 2, 7, 8, 3, 4, 7, 7, 2, 9, 9, 9, 3, 2, 6, 4, 3, 6, 6, 2, 6, 3, 5, 4, 0, 0, 9, 1, 3, 4, 0, 3, 7, 3, 3, 5, 2, 2, 7, 1, 1, 1, 2, 2, 0, 9, 5, 7, 9, 2, 2, 5, 2, 4, 3, 1, 1, 8, 2, 1, 1, 4, 9, 7, 8, 5, 9, 6, 7, 3, 1, 9, 0, 3, 1, 3, 5, 4, 5, 7, 7,  ... , 9, 8, 9, 4, 4, 7, 1, 0, 4, 3, 6, 3, 9, 8, 3, 6, 8, 3, 6, 6, 2, 6, 7, 3, 0, 0, 0, 2, 5, 1, 2, 9, 2, 2, 1, 6, 3, 9, 1, 1, 5], 'batch_label': 'training batch 1 of 5', 'filenames': ['leptodactylus_pentadactylus_s_000004.png', 'camion_s_000148.png', 'tipper_truck_s_001250.png', ... , 'truck_s_000036.png', 'car_s_002296.png', 'estate_car_s_001433.png', 'cur_s_000170.png']}
+       [ 62,  61,  60, ..., 130, 130, 131]], dtype=uint8), 
+'labels': [6, 9, 9, 4, 1, 1, 2, 7, 8, 3, 4, 7, 7, 2, 9, 9, 9, 3, 2, 6, 4, 3, 6, 6, 2, 6, 3, 5, 4, 0, 0, 9, 1, 3, 4, 0, 3, 7, 3, 3, 5, 2, 2, 7, 1, 1, 1, 2, 2, 0, 9, 5, 7, 9, 2, 2, 5, 2, 4, 3, 1, 1, 8, 2, 1, 1, 4, 9, 7, 8, 5, 9, 6, 7, 3, 1, 9, 0, 3, 1, 3, 5, 4, 5, 7, 7,  ... , 9, 8, 9, 4, 4, 7, 1, 0, 4, 3, 6, 3, 9, 8, 3, 6, 8, 3, 6, 6, 2, 6, 7, 3, 0, 0, 0, 2, 5, 1, 2, 9, 2, 2, 1, 6, 3, 9, 1, 1, 5],
+'batch_label': 'training batch 1 of 5', 
+'filenames': ['leptodactylus_pentadactylus_s_000004.png', 'camion_s_000148.png', 'tipper_truck_s_001250.png', ... , 'truck_s_000036.png', 'car_s_002296.png', 'estate_car_s_001433.png', 'cur_s_000170.png']}
 ```
 
 很明显，python版本存储成了一个`dict`，其中`key`包括:
@@ -33,7 +36,10 @@ Creat your own dataset with the similar format with CIFAR10 in python version.
 
 ```
 {'data': array([[255, 255, 255, ..., 255, 255, 255],
-       [255, 255, 255, ..., 255, 255, 255]], dtype=uint8), 'label': array([0, 1], dtype=uint8), 'batch_label': 'training batch 0 of 1', 'filenames': ['a.png', 'b.png']}
+       [255, 255, 255, ..., 255, 255, 255]], dtype=uint8), 
+'label': array([0, 1], dtype=uint8), 
+'batch_label': 'training batch 0 of 1', 
+'filenames': ['a.png', 'b.png']}
 ```
 
 跟官方数据的输出格式一致，虽然没有训练测试，但是理论上应该没问题，大家在测试的过程中，如果遇到问题，欢迎指出。
