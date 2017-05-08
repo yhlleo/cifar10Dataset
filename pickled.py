@@ -12,7 +12,7 @@ def pickled(savepath, data, label, fnames, bin_num=BIN_COUNTS, mode="train"):
   '''
     savepath (str): save path
     data (array): image data, a nx3072 array
-    label (array): image label, a nx1 array
+    label (list): image label, a list with length n
     fnames (str list): image names, a list with length n
     bin_num (int): save data in several files
     mode (str): {'train', 'test'}
@@ -20,6 +20,7 @@ def pickled(savepath, data, label, fnames, bin_num=BIN_COUNTS, mode="train"):
   assert os.path.isdir(savepath)
   total_num = len(fnames)
   samples_per_bin = total_num / bin_num
+  assert samples_per_bin > 0
   for i in range(bin_num): 
     start = i*samples_per_bin
     end = (i+1)*samples_per_bin
