@@ -36,8 +36,9 @@ def read_data(filename, data_path, shape=None, color='RGB'):
     lines = f.read().splitlines()
     count = len(lines)
     data = np.zeros((count, DATA_LEN), dtype=np.uint8)
-    label = np.zeros(count, dtype=np.uint8)
+    #label = np.zeros(count, dtype=np.uint8)
     lst = [ln.split(' ')[0] for ln in lines]
+    label = [int(ln.split(' ')[1]) for ln in lines]
     
     idx = 0
     s, c = SHAPE, CHANNEL_LEN
