@@ -9,7 +9,7 @@ from load_data import *
 
 data_path = './data'
 file_list = './data/images.lst'
-save_path = './bin/'
+save_path = './bin'
 
 if __name__ == '__main__':
   data, label, lst = read_data(file_list, data_path, shape=32)
