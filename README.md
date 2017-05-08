@@ -37,7 +37,7 @@ Creat your own dataset with the similar format with CIFAR10 in python version.
 ```
 {'data': array([[255, 255, 255, ..., 255, 255, 255],
        [255, 255, 255, ..., 255, 255, 255]], dtype=uint8), 
-'label': array([0, 1], dtype=uint8), 
+'label': [0, 1], 
 'batch_label': 'training batch 0 of 1', 
 'filenames': ['a.png', 'b.png']}
 ```
