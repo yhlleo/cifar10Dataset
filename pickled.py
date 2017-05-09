@@ -25,7 +25,7 @@ def pickled(savepath, data, label, fnames, bin_num=BIN_COUNTS, mode="train"):
     start = i*samples_per_bin
     end = (i+1)*samples_per_bin
     idx = 0
-    if end < total_num:
+    if end <= total_num:
       dict = {'data': data[start:end, :],
               'labels': label[start:end],
               'filenames': fnames[start:end]}
