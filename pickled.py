@@ -44,7 +44,8 @@ def pickled(savepath, data, label, fnames, bin_num=BIN_COUNTS, mode="train"):
     idx = idx + 1
 
 def unpickled(filename):
-  assert os.path.isdir(filename)
+  #assert os.path.isdir(filename)
+  assert os.path.isfile(filename)
   with open(filename, 'rb') as fo:
     dict = cPickle.load(fo)
   return dict
